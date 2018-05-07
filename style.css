@@ -1,0 +1,22 @@
+header {
+    text-align: center;
+    background-color: blue;
+    padding: 50px;
+    margin-bottom: 20px;
+}
+
+.train-table {
+    width: 100%;
+}
+
+.subheader {
+    text-align: center;
+    background-color: green;
+    margin: 10px 0;
+}
+
+input {
+    display: block;
+    margin-bottom: 5px;
+    width: 100%;
+}

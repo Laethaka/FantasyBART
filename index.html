@@ -9,6 +9,7 @@
   <link rel="stylesheet" type="text/css" href="style.css">
   <script src="moment.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
 </head>
 
 <body>
@@ -17,10 +18,21 @@
         <header>Welcome to Fantasy BART!</header>
 
       <div class='current-train-box'>
-
+        <div class="subheader">Current trains:</div>
+        <table class='train-table' id='trainHeaders'>
+          <tr>
+            <th>Train Name</th>
+            <th>Destination</th>
+            <th>Frequency (min)</th>
+            <th>Next Arrival</th>
+            <th>ETA (min)</th>
+          </tr>
+        </table>
+        <table class='train-table' id='trainTable'></table>
       </div>
 
       <div class='train-adder-box'>
+        <div class='subheader'>Add a train!</div>
         <label for="newName">New Train Name:</label>
         <input type='text' id='newName'>
         <label for="newDestination">New Train Destination:</label>
@@ -29,6 +41,7 @@
         <input type='text' id='newStartTime'>
         <label for="newFrequency">Frequency (min):</label>
         <input type='text' id='newFrequency'>
+        <button id='adderButton'>Add this train!</button>
       </div>
 
     </div>
